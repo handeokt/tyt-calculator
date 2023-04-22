@@ -1,0 +1,69 @@
+
+
+let turkceDogru, turkceYanlıs = 0;
+
+let matematikDogru, matematikYanlis = 0;
+
+let fenDogru, fenYanlis = 0;
+
+let sosyalDogru, sosyalYanlis = 0;
+
+let puan = 0;
+
+let okulPuani = 0;
+
+let yeniSatir = "/r/n";
+
+let net = 0;
+
+let metin = "1.tyt Puan hesaplama" + yeniSatir + "2.cikis yap.." + yeniSatir + "secim yapiniz:" + yeniSatir;
+
+let secim = prompt(metin);
+
+switch (secim) {
+
+    case "1":
+
+        alert("tyt hesaplamaya hoşgeldiniz:)");
+
+        turkceDogru = Number(prompt("turkce dogrunuzu girin:"));
+        turkceYanlıs = Number(prompt("turkce yanlisinizi girin:"));
+
+        matematikDogru = Number(prompt("matematik dogrunuzu girin: "));
+        matematikYanlis = Number(prompt("matematik yanlisinzi girin: "));
+
+        fenDogru = Number(prompt("fen dogrunuzu girin:"));
+        fenYanlis = Number(prompt("fen yanlisinizi girin:"));
+
+        sosyalDogru = Number(prompt("sosyal dogrunuzu girin:"));
+        sosyalYanlis = Number(prompt("sosyal yanlisinizi girin:"));
+
+        okulPuani = Number(prompt("okul puaninizi girin: "));
+
+        net = (turkceDogru + matematikDogru + fenDogru + sosyalDogru) - ((turkceYanlıs + matematikYanlis +
+            fenYanlis + sosyalYanlis) / 4);
+
+        puan = (net * 4 + okulPuani);
+
+        alert("puanınız:" + puan);
+
+        break;
+
+
+    case "2":
+
+
+        alert("cikis yapiliyor..");
+
+        break;
+
+
+    default:
+
+        alert("gecerli bir sayi seciniz..");
+
+        break;
+        
+        
+
+}
